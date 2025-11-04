@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehta Exectronic Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="stylee.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+<style>
+   #search-container {
+            position: relative;
+            display: inline-block;
+        }
+        #search-input {
+            display: none; /* Initially hidden */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 200px;
+        }
+        #suggestions {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            border: 1px solid #ccc;
+            background: white;
+            z-index: 1000;
+            width: 200px;
+            display: none; 
+        }
+        #suggestions li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        #suggestions li:hover {
+            background-color: #f0f0f0;
+        }
+        .img-col-2-1-image {
+            text-align: center; 
+            overflow: hidden; 
+        }
+
+        .img-col-2-1-image img {
+            width: 500px;
+            height: 400px; 
+            transition: transform 0.3s ease; 
+        }
+
+        .zoom-out {
+            transform: scale(0.9); 
+        }
+        .colorchange:hover{
+            color: blue;
+            transition: color 0.3s ease;
+        }
+
+        #demo {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 0px;
+}
+
+.shopnow button:hover{
+    background-color: #ff6600;
+    color: white;
+}
+        
+</style>
+<script src="body.js"></script>
+
+<body>
+    
+    <div class="header">
+        <nav class="secondary-nav-md">
+            <div class="header-col1">
+                <div>
+                  <header>Welcome to Mehta Electronic store!</header>
+
+                </div>
+                <div class="header-icon">
+                    
+                 <div id="search-container">
+                  <a href="#" id="search-icon">
+                      <i class="fa-solid fa-magnifying-glass" style="font-size: 24px;"></i>
+                  </a>
+                  <input type="text" id="search-input" placeholder="Search for products...">
+                  <ul id="suggestions"></ul>
+              </div>
+              
+                  <a href="register.html"><button><i class="fa-regular fa-user"></i>  Login</button></a>
+                 <a href="cart.html"> <button><i class="fa-solid fa-cart-shopping"></i></button></a>
+                  <button><i class="fa-regular fa-heart"></i></button>
+               </div>
+
+                </div>
+            </div>
+            
+    
+        </nav>
+        <nav class="primary-nav">
+            <div class="container">
+                <div class="mainlogo">
+                    
+                </div>
+                <!-- navigation of the page -->
+                 <div class="navbar">
+                    <div class="main-nav">
+                        <ul class="menu-list">
+                             <a href="index.html">Home</a>
+                              
+                                <a href="about.html" class="nav-link">About</a>
+                                <a href="shop.html" class="nav-link">Shop</a>
+                                <a href="blog.html" class="nav-link">Blogs</a>
+                                <a href="contact.html" class="nav-link">Contact US</a>
+                            
+                        </ul>
+                    </div>
+                 </div>
+                 
+            </div>
+        </nav>
+        
+    
+
+        </div>
+    </div>
+
+    <!-- starting point of banner section  -->
+    <div class="imgcol-2">
+      <div class="img-col-2-1">
+          <div class="img-col-2-1-1">
+            <br>
+              <h4 style="font-size:20PX ; color: yellow;">NEW ARRIVALS</h4>
+              <h2>4K LCD<br>Quantum Vision LCD<h2>
+              
+              <h6>Limited Time: Online Only!</h6>
+              <a href="shop.html" id="shopnow"><button style="background-color: #2067ec; border-radius: 4PX; padding: 6PX; font-size: 15PX; ">Shop Now</button></a>
+          </div>
+
+              
+          <div class="img-col-2-1-image">
+              <img src="Images/view-computer-monitor-display_23-2150757335-removebg-preview.png" alt="4K LCD" height="400PX" width="500PX">
+          </div>
+      </div>
+      <div class="img-col-2-2">
+        <div class="img-col-2-2-1">
+            <div class="img-col-2-2-1-1">
+              
+                <h4>
+                  <h2>Mobile<br>Nexus Mobbile Pro  256GB</h2>
+                  <h6>Limited Time: Online Only!</h6>
+                </h4>
+                
+                
+                
+            </div>
+
+                
+            <div class="img-col-2-2-image">
+                <img src="Images/realistic-black-smartphone-design_23-2148374056-removebg-preview.png" alt="Nexus mobbile pro" height="150PX" width="150PX">
+            </div>
+          </div>
+          <div class="img-col-2-2-2">
+            <div class="img-col-2-2-1-1">
+              
+              <h4>
+                <h3>iPadMini<br><b style="color: yellow;">10 inch </b>iPad Mini Pro</h3>
+                <h6>Limited Time: Online Only!</h6>
+              </h4>
+              
+              
+              
+          </div>
+
+              
+          <div class="img-col-2-2-image">
+              <img src="Images/Apple_iPad-mini_ipad-family-lineup_09142021_big.jpg.large-removebg-preview.png" alt="Nexus mobbile pro" height="150PX" width="150PX">
+          </div>
+          </div>
+          
+      </div>
+  </div>
+  <!-- middle section  -->
+   <div class="img-box">
+    <a href="shop.html" class="category-block" style="text-decoration: none; color: black;">
+      <div class="image-box-1">
+          <img src="Images/71BDfnzkrJL-removebg-preview.png" alt="image" width="100PX" height="100PX" style="border-radius: 50%;" >
+      </div>
+      <p class="fw-500 mb-4p">Headphones</p>
+      <p class="dark-gray">8 Product</p>
+  </a>
+  <a href="shop.html" class="category-block" style="text-decoration: none; color: black;">
+    <div class="image-box-1">
+        <img src="Images/g502-hero-gallery-1-nb-removebg-preview.png" alt="image" width="100PX" height="100PX" style="border-radius: 50%;" >
+    </div>
+    <p class="fw-500 mb-4p">Gaming Mouse</p>
+    <p class="dark-gray">8 Product</p>
+</a>
+<a href="shop.html" class="category-block" style="text-decoration: none; color: black;">
+  <div class="image-box-1">
+      <img src="Images/231645_0_gkp2tg-removebg-preview.png" alt="image" width="100PX" height="100PX" style="border-radius: 50%;" >
+  </div>
+  <p class="fw-500 mb-4p">Playstation</p>
+  <p class="dark-gray">8 Product</p>
+</a>
+<a href="shop.html" class="category-block" style="text-decoration: none; color: black;">
+  <div class="image-box-1">
+      <img src="Images/images-removebg-preview.png" alt="image" width="100PX" height="100PX" style="border-radius: 50%;" >
+  </div>
+  <p class="fw-500 mb-4p">RGB Keyboard</p>
+  <p class="dark-gray">8 Product</p>
+</a>
+    
+    
+<a href="shop.html" class="category-block" style="text-decoration: none; color: black;">
+  <div class="image-box-1">
+      <img src="Images/068Kw44RCii3rOtK87KhKs8-2.fit_lim.size_919x518.v1696274852-removebg-preview.png" alt="image" width="100PX" height="100PX" style="border-radius: 50%;" >
+  </div>
+  <p class="fw-500 mb-4p">macBook/PCs</p>
+  <p class="dark-gray">8 Product</p>
+</a>
+  
+<a href="shop.html" class="category-block" style="text-decoration: none; color: black;">
+  <div class="image-box-1" >
+      <img src="Images/images-removebg-preview (1).png" alt="image" width="100PX" height="100PX" style="border-radius: 50%;" >
+  </div>
+  <p class="fw-500 mb-4p">Gaming Headphones</p>
+  <p class="dark-gray">8 Product</p>
+</a>
+
+<a href="shop.html" class="category-block" style="text-decoration: none; color: black;">
+  <div class="image-box-1">
+      <img src="Images/apple-led-monitor.jpg" alt="image" width="100PX" height="100PX" style="border-radius: 50%;" >
+  </div>
+  <p class="fw-500 mb-4p">Apple LED</p>
+  <p class="dark-gray">8 Product</p>
+</a>
+    
+<a href="shop.html" class="category-block" style="text-decoration: none; color: black;">
+  <div class="image-box-1">
+      <img src="Images/samsung-galaxy-a04e-light-blue-128-gb-4-gb-ram-.jpg" alt="image" width="100PX" height="100PX" style="border-radius: 50%;" >
+  </div>
+  <p class="fw-500 mb-4p">Samsung Phone</p>
+  <p class="dark-gray">8 Product</p>
+</a>
+
+    
+    
+<a href="shop.html" class="image-box-1" style="text-decoration: none; color: black;">
+  <div class="image-box-">
+      <img src="Images/images.jpg" alt="image" width="100PX" height="100PX" style="border-radius: 50%; " >
+  </div>
+  <p class="fw-500 mb-4p">AirBuds</p>
+  <p class="dark-gray">8 Product</p>
+</a>
+    
+   
+    <a href="shop.html" id="image-box-1" style="text-decoration: none; color: black;">
+      <div class="image-box mb-12">
+          <img src="Images/download.jpg" alt="image" width="100PX" height="100PX" style="border-radius: 50%;" >
+      </div>
+      <p class="fw-500 mb-4p">iPad Mini</p>
+      <p class="dark-gray">8 Product</p>
+  </a>
+    
+   </div>
+ <!-- start feature product section -->
+                                          
+    <section class="feature-product-sec">
+        <!-- <div class="f-p-s-special-offer">
+            <a href="shop.html">
+                <div class="f-p-s-special-offer-img">
+                <h4>Special Offer</h4>
+
+                    <img src="Images/1147139.jpg" alt="Playstation" height="200PX" width="200PX">
+                    <h5>Areo control Pro Joysticks</h5>
+                <h5>Rs. 9960</h5>
+                </div>
+                
+            </a>
+        </div> -->
+        <div class="feature-section-product-head">
+            <h4 style="margin-left: 10PX;">Features products</h4>
+            <nav class="feature-product-sec-nav">
+                <ul>
+                    <li class="" role="presentation">
+                        <button class="feature-product-sec-nav-c-button" id="all-tab" data-bs-toggle="tab" data-bs-target="#all"
+                            type="button" role="tab" aria-controls="all" aria-selected="true">All Products </button>
+                    </li>
+                    <li class="" role="presentation">
+                        <button class="feature-product-sec-nav-c-button" id="all-tab" data-bs-toggle="tab" data-bs-target="#all"
+                            type="button" role="tab" aria-controls="all" aria-selected="true">Laptop </button>
+                    </li>
+                    <li class="" role="presentation">
+                        <button class="feature-product-sec-nav-c-button" id="all-tab" data-bs-toggle="tab" data-bs-target="#all"
+                            type="button" role="tab" aria-controls="all" aria-selected="true">Keyboard </button>
+                    </li>
+                    <li class="" role="presentation">
+                        <button class="feature-product-sec-nav-c-button" id="all-tab" data-bs-toggle="tab" data-bs-target="#all"
+                            type="button" role="tab" aria-controls="all" aria-selected="true">Mouse </button>
+                    </li>
+                    <li class="" role="presentation">
+                        <button class="feature-product-sec-nav-c-button" id="all-tab" data-bs-toggle="tab" data-bs-target="#all"
+                            type="button" role="tab" aria-controls="all" aria-selected="true">Headphones </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="feature-section-product-body">
+            <div class="feature-section-product-body-box">
+                <div class="feature-section-product-body-box-img">
+                    <a href="shop.html"> <img src="Images/images-removebg-preview__1_-removebg-preview.png" alt="Gaming headphones"></a>
+                   </div><br><br><br>
+                <div class="feature-section-product-body-box-content">
+                    <h5><a href="shop.html">Elite Audio Gea</a></h5>
+                    <p>Surely one of the best gaming mice with a sleek design and advanced features.</p>
+                    <h5 style="color: red;">★★★★<span class="light-gray" style="color: rgb(129, 127, 127);">★</span>&nbsp;&nbsp;<span style="color: rgb(129, 127, 127);">(80)</span><br>
+                        <span style="color: rgb(129, 127, 127);"><del> $12.00</del></span>&nbsp;&nbsp;<b style="color: black;">$85.00</b> <br>
+                    <button style="border-color: black;" class="changecolor"><a href="cart.html">Add to Cart</a></button>
+                </div>
+                
+
+            </div>
+            <div class="feature-section-product-body-box">
+                <div class="feature-section-product-body-box-img">
+                    <a href="shop.html"> <img src="Images/FRONTECH-Ultima-Series-32-Inch-8001-cm-with-1920x1080-Pixels-Curved-LED-Monitor--1000x1000-removebg-preview.png" alt="LED TV"  height="250PX" width="250PX"></a>
+                   </div><br><br><br>
+                <div class="feature-section-product-body-box-content">
+                    <h5><a href="shop.html">Ultra Bright LCD</a></h5>
+                    <p>Ultra Bright LCD offers enhanced brightness for clear, vivid display visibility.</p>
+                    <h5 style="color: red;">★★★★<span class="light-gray" style="color: rgb(129, 127, 127);">★</span>&nbsp;&nbsp;<span style="color: rgb(129, 127, 127);">(80)</span><br>
+                        <span style="color: rgb(129, 127, 127);"><del> $12.00</del></span>&nbsp;&nbsp;<b style="color: black;">$10.00</b> <br>
+                    <button style="border-color: black;" class="changecolor"><a href="cart.html">Add to Cart</a></button>
+                </div>
+                
+
+            </div>
+            <div class="feature-section-product-body-box">
+                <div class="feature-section-product-body-box-img">
+                    <a href="shop.html"> <img src="Images/nexus-5x-lg-mobile-500x500-removebg-preview.png" alt="Mobile" height="250PX" width="270PX"></a>
+                   </div><br><br><br>
+                <div class="feature-section-product-body-box-content">
+                    <h5><a href="shop.html">Nexus Mobile Pro 256G</a></h5>
+                    <p>Nexus Mobile Pro 256G offers high storage, speed, and sleek design.</p>
+                    <h5 style="color: red;">★★★★<span class="light-gray" style="color: rgb(129, 127, 127);">★</span>&nbsp;&nbsp;<span style="color: rgb(129, 127, 127);">(80)</span><br>
+                        <span style="color: rgb(129, 127, 127);"><del> $12.00</del></span>&nbsp;&nbsp;<b style="color: black;">$10.00</b> <br>
+                    <button style="border-color: black;" class="changecolor"><a href="cart.html">Add to Cart</a></button>
+                </div>
+                
+
+            </div>
+            <div class="feature-section-product-body-box">
+                <div class="feature-section-product-body-box-img">
+                    <a href="shop.html"> <img src="Images/images-removebg-preview (2).png" alt="laptop" height="250PX" width="260PX"></a>
+                   </div><br><br><br>
+                <div class="feature-section-product-body-box-content">
+                    <h5><a href="shop.html">Ultra Tech Book Plus</a></h5>
+                    <p>Ultra Tech Book Plus: Advanced, versatile laptop with cutting-edge features.</p>
+                    <h5 style="color: red;">★★★★<span class="light-gray" style="color: rgb(129, 127, 127);">★</span>&nbsp;&nbsp;<span style="color: rgb(129, 127, 127);">(80)</span><br>
+                        <span style="color: rgb(129, 127, 127);"><del> $1350.00</del></span>&nbsp;&nbsp;<b style="color: black;">$1250.00</b> <br>
+                    <button style="border-color: black;" class="changecolor"><a href="cart.html" >Add to Cart</a></button>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+                                         
+  <!-- End feature product section -->
+   <!-- brand section start  -->
+   <div class="brand-section">
+    <div class="scroll-container">
+        <div class="brand-section-img">
+            <img src="Images/852ea0941d412771bd23065ff90dcac2.jpg" height="200PX" width="300PX" alt="brand1">
+        </div>
+        <div class="brand-section-img">
+            <img src="Images/9ecfec2b504a3074df948ee521ccc0d0.jpg" height="200PX" width="300PX" alt="brand2">
+        </div>
+        <div class="brand-section-img">
+            <img src="Images/2c8827935b5a7fe591b51c7a16f22bf1.jpg" height="200PX" width="300PX" alt="brand3">
+        </div>
+        <div class="brand-section-img">
+            <img src="Images/c00a410c9db8b83e4e7d176c9841d18f.jpg" height="200PX" width="300PX" alt="brand4">
+        </div>
+        <div class="brand-section-img">
+            <img src="Images/dc36c1d02dfe2ec192b7ec6d2289cb2d.jpg" height="200PX" width="300PX">
+        </div>
+       
+        <div class="brand-section-img">
+            <img src="Images/852ea0941d412771bd23065ff90dcac2.jpg" height="200PX" width="300PX" alt="brand1">
+        </div>
+        <div class="brand-section-img">
+            <img src="Images/9ecfec2b504a3074df948ee521ccc0d0.jpg" height="200PX" width="300PX" alt="brand2">
+        </div>
+        <div class="brand-section-img">
+            <img src="Images/2c8827935b5a7fe591b51c7a16f22bf1.jpg" height="200PX" width="300PX" alt="brand3">
+        </div>
+        <div class="brand-section-img">
+            <img src="Images/c00a410c9db8b83e4e7d176c9841d18f.jpg" height="200PX" width="300PX" alt="brand4">
+        </div>
+        <div class="brand-section-img">
+            <img src="Images/dc36c1d02dfe2ec192b7ec6d2289cb2d.jpg" height="200PX" width="300PX" alt="brand5">
+        </div>
+    </div>
+</div>
+    
+    <!-- brand section end  -->
+
+   <!--start  blogs section  -->
+   <div class="feature-section-product-head">
+    <h4 style="margin-left: 10PX;">Last Blogs</h4>
+    <nav class="feature-product-sec-nav">
+        
+        <button style="margin-top: 15PX; border-color: black;"> <img src="icons/right-arrow (2).png" alt="" height="30PX" width="30PX"></button>
+
+        <button style="margin-top: 15PX; margin-right: 10PX;"><img src="icons/right-arrow (3).png" alt="" height="30PX" width="30PX"></button>
+    </nav>
+</div>
+<section class="main-section-blog-row-3">
+    <div class="main-section-bolg-col-1">
+      <div class="main-section-bolg-col1-row1">
+        <div class="main-section-bolg-col1-row1-img">
+          <img src="Images/BW_Px8_HeroBanner_Desktop-740x480.jpg" alt="images/BW_Px8_Hero"
+          height="300PX" width="300PX">
+        </div>
+        <div class="main-section-bolg-col1-row1-content">
+          <i class="fa-regular fa-calendar-days">  24 June, 2024</i>
+          <h5>Headphone Heroes: Elevating Your <br> Experience Quality Sound.</h5>
+          <div class="main-section-bolg-col1-row1-i-c-v">
+            <img src="Images/1000_F_310913685_WTaJzVhQsjksSnwjjbxuocj1e4Udys0L.jpg" alt="" >By preeti
+            <img src="icons/speech-bubble.png" alt="">Comments
+            <img src="icons/eye (1).png" alt="">Views
+          </div>
+          <p>Headphone Heroes: Elevating your experience with immersive, high-quality sound for ultimate audio enjoyment    <button>Read more --></button> </p>
+          
+        </div>
+      </div>
+      <div class="main-section-bolg-col1-row1">
+        <div class="main-section-bolg-col1-row1-img">
+          <img src="Images/download (1).jpg" alt="images/BW_Px8_Hero"
+          height="300PX" width="300PX">
+        </div>
+        <div class="main-section-bolg-col1-row1-content">
+          <i class="fa-regular fa-calendar-days">  24 June, 2024</i>
+          <h5>Gizmo Galore: Exploring the Coolest <br>Gadgets on the Market.</h5>
+          <div class="main-section-bolg-col1-row1-i-c-v">
+            <img src="Images/1000_F_310913685_WTaJzVhQsjksSnwjjbxuocj1e4Udys0L.jpg" alt="" >By preeti
+            <img src="icons/speech-bubble.png" alt="">Comments
+            <img src="icons/eye (1).png" alt="">Views
+          </div>
+          <p>Gizmo Galore offers a curated selection of cutting-edge gadgets, blending innovation, style, and functionality effortlessly  <button>Read more --></button> </p>
+          
+        </div>
+      </div>
+      <div class="main-section-bolg-col1-row1">
+        <div class="main-section-bolg-col1-row1-img">
+          <img src="Images/tv-buying-guide-how-to-choose-the-right-tv-for-the-best-entertainment.webp" alt="images/BW_Px8_Hero"
+          height="300PX" width="300PX">
+        </div>
+        <div class="main-section-bolg-col1-row1-content">
+          <i class="fa-regular fa-calendar-days">  24 June, 2024</i>
+          <h5>The 4K Perspective: Gaining Insights <br> into Ultra HD Entertainment</h5>
+          <div class="main-section-bolg-col1-row1-i-c-v">
+            <img src="Images/1000_F_310913685_WTaJzVhQsjksSnwjjbxuocj1e4Udys0L.jpg" alt="" >By preeti
+            <img src="icons/speech-bubble.png" alt="">Comments
+            <img src="icons/eye (1).png" alt="">Views
+          </div>
+          <p>The 4K perspective offers ultra-high-definition clarity, vivid colors, and immersive entertainment for an enhanced viewing experience.  <button>Read more --></button> </p>
+          
+        </div>
+      </div>
+      <div class="main-section-bolg-col1-row1">
+        <div class="main-section-bolg-col1-row1-img">
+          <img src="Images/images (1).jpg" alt="images/BW_Px8_Hero"
+          height="300PX" width="300PX">
+        </div>
+        <div class="main-section-bolg-col1-row1-content">
+          <i class="fa-regular fa-calendar-days">  2 June, 2024</i>
+          <h5>Gaming Grasp: Navigating the World of <br> Game Controllers</h5>
+          <div class="main-section-bolg-col1-row1-i-c-v">
+            <img src="Images/1000_F_310913685_WTaJzVhQsjksSnwjjbxuocj1e4Udys0L.jpg" alt="" >By preeti
+            <img src="icons/speech-bubble.png" alt="">Comments
+            <img src="icons/eye (1).png" alt="">Views
+          </div>
+          <p>Gaming Grasp: Master the art of game controllers for immersive, precise, and enhanced gameplay experiences.  <button class="colorchange">Read more --></button> </p>
+          
+        </div>
+      </div>
+      
+    </div>
+    </div>
+  </section>
+    <!-- end blogs section  -->
+     <!-- offers time section start  -->
+     <section class="offers-time">
+        <div class="offers-time-content">
+            <h1>Special Offers & Time Savings</h1>
+            <p>At Mehta Electronics, we strive to offer the best deals and time-saving offers.<br> Check out our latest deals and time savings for your next purchase.</p>
+            <button class="view-offers-button">View all Offers</button>
+        </div>
+        <p id="demo"></p>
+        
+        <div class="offers-image">
+            <img src="Images/welcome_hero_startframe__t2k4bw3ehv2a_xlarge-removebg-preview.png" alt="Special Offers" height="200" width="200">
+        </div>
+    </section>
+
+      <!-- offers time section ended  -->
+
+                                                           
+
+    <!-- footer section  -->
+    <div class="hr-line"></div>
+    <div class="costumer-help">
+        <div class="shoping-help">
+           
+                <img src="icons/delivery-truck.png" alt="truck" style="height: 50PX; width: 50PX; padding-top: 10PX;">
+                <p><b>Free shipping</b> Over Rs.20,000</p>
+            
+        </div>
+        <div class="shoping-help">
+           
+            <img src="icons/right-arrow (1).png" alt="truck" style="height: 50PX; width: 50PX; padding-top: 10PX;">
+            <p><b>Money back</b> Return within  7 days</p>
+        
+    </div>
+    <div class="shoping-help">
+           
+        <img src="icons/stock-vector-shopping-tags-line-icon-special-offer-sign-discount-coupons-symbol-vector-1917596684-removebg-preview.png" alt="truck" style="height: 50PX; width: 50PX; padding-top: 10PX;">
+        <p><b>Buy 4 get 5th</b> 50% off </p>
+    
+</div>
+<div class="shoping-help">
+           
+    <img src="icons/question.png" alt="truck" style="height: 50PX; width: 50PX; padding-top: 10PX;">
+    <p><b>Any questions?</b> experts are ready</p>
+
+</div>
+    </div>
+    <div class="hr-line"></div>
+    <div class="sixth-container">
+        <div class="l-container">
+          <div class="l1-container"><h3>ABOUT Mehta Electronic
+          </h3>
+          <ul>
+              <li><a href="About-page.html"> About</a></li>
+              <li><a href="career-page.html"> Customer Service</a></li>
+              <li><a href="term&condition-page.html"> Returns & Refunds</a></li>
+              <li><a href="#"> Cookie Guidelines</a></li>
+              <li><a href="#"> Delivery Information</a></li>
+              <li><a href="privacy-page.html"> Privacy Policy</a></li>
+              
+          </ul></div>
+            <div class="l2-container">
+                <h3>CONTACT With us</h3>
+                <ul>
+                    <li> <a href="#"> Feedback</a>
+                    </li>
+                    <li> <a href="contact-page.html"> Contact Us</a></li>
+                    <li><a href="#"> Advertise with Us</a></li>
+                    
+                </ul>
+            </div>
+            <div class="l3-container">
+                <h3>Others</h3>
+                <ul>
+                    <li><a href="#"> Life insurence </a></li>
+                    <li><a href="#">  mehta Tyres </a></li>
+                    <li><a href="#"> MARCO Battery </a></li>
+                    <li><a href="#">Car Sales Trends </a></li>
+                   
+                </ul>
+            </div>
+            <div class="l4-container">
+                <h3>Download Mobile App</h3>
+                <div class="mobile-app"><a href="https://www.apple.com/in/app-store/" style="text-decoration: none;">
+                    <div class="google"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="70" height="70" viewBox="0,0,256,256">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M15.9043,1.07813c-0.06094,-0.00937 -0.13008,-0.00352 -0.20508,0.02148c-1,0.2 -2.09883,0.8 -2.79883,1.5c-0.6,0.6 -1.09961,1.6 -1.09961,2.5c0,0.2 0.19844,0.40039 0.39844,0.40039c1.1,-0.1 2.20039,-0.70039 2.90039,-1.40039c0.6,-0.8 1.09961,-1.69961 1.09961,-2.59961c0,-0.225 -0.11211,-0.39375 -0.29492,-0.42187zM16.19922,5.40039c-1.8,0 -2.59883,1.09961 -3.79883,1.09961c-1.3,0 -2.5,-1 -4,-1c-2.1,0 -5.30078,1.99961 -5.30078,6.59961c-0.1,4.2 3.70039,8.90039 5.90039,8.90039c1.3,0 1.60039,-0.80078 3.40039,-0.80078c1.8,0 2.2,0.80078 3.5,0.80078c1.5,0 2.6,-1.60039 3.5,-2.90039c0.4,-0.7 0.7,-1.09922 1,-1.69922c0.2,-0.4 -0.00039,-0.8 -0.40039,-1c-2.6,-1.3 -3.09922,-5.5 -0.19922,-7c0.5,-0.3 0.59922,-0.90117 0.19922,-1.20117c-1.1,-1 -2.70078,-1.79883 -3.80078,-1.79883z"></path></g></g>
+                        </svg><div><p style="font-size:xx-small;">Download on <br><b style="font-size: 20PX;">App Store</b></p></div></div> </a>  
+                        <a href="https://play.google.com/console/about/deeplinks/" style="text-decoration: none;">
+                        <div class="playstore">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="70" height="70" viewBox="0 0 48 48">
+                                <path fill="#4db6ac" d="M7.705,4.043C7.292,4.15,7,4.507,7,5.121c0,1.802,0,18.795,0,18.795S7,42.28,7,43.091c0,0.446,0.197,0.745,0.5,0.856l20.181-20.064L7.705,4.043z"></path><path fill="#dce775" d="M33.237,18.36l-8.307-4.796c0,0-15.245-8.803-16.141-9.32C8.401,4.02,8.019,3.961,7.705,4.043l19.977,19.84L33.237,18.36z"></path><path fill="#d32f2f" d="M8.417,43.802c0.532-0.308,15.284-8.825,24.865-14.357l-5.601-5.562L7.5,43.947C7.748,44.038,8.066,44.004,8.417,43.802z"></path><path fill="#fbc02d" d="M41.398,23.071c-0.796-0.429-8.1-4.676-8.1-4.676l-0.061-0.035l-5.556,5.523l5.601,5.562c4.432-2.559,7.761-4.48,8.059-4.653C42.285,24.248,42.194,23.5,41.398,23.071z"></path>
+                                </svg><p style="font-size:xx-small;">GET IT ON <br><b style="font-size: 20PX;">Google Play</b></p> </div></div></a>
+                    
+                <h4>Connect with us</h4>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+            </div>
+                
+            </div>
+        </div>
+       
+    </div>
+    <div class="hr-line"></div>
+
+    <footer>
+        <p>&copy; 2024 Mehta Electronic. All rights reserved.</p>
+    </footer>
+    <script>
+      $(document).ready(function() {
+  const products = [
+      "Apple",
+      "Banana",
+      "Cherry",
+      "Date",
+      "Elderberry",
+      "Fig",
+      "Grape",
+      "Honeydew"
+  ];
+
+  
+  $('#search-icon').click(function(event) {
+      event.preventDefault();
+      $('#search-input').toggle().focus();
+      $('#suggestions').hide(); 
+  });
+
+  
+  $('#search-input').on('input', function() {
+      const query = $(this).val().toLowerCase();
+      $('#suggestions').empty(); 
+
+      if (query) {
+          const filteredProducts = products.filter(product => product.toLowerCase().includes(query));
+          if (filteredProducts.length > 0) {
+              filteredProducts.forEach(product => {
+                  $('#suggestions').append(`<li>${product}</li>`);
+              });
+              $('#suggestions').show(); 
+          } else {
+              $('#suggestions').hide(); 
+          }
+      } else {
+          $('#suggestions').hide(); 
+      }
+  });
+
+  
+  $(document).on('click', '#suggestions li', function() {
+      $('#search-input').val($(this).text());
+      $('#suggestions').hide(); 
+  });
+
+  
+  $(document).click(function(event) {
+      if (!$(event.target).closest('#search-container').length) {
+          $('#search-input').hide(); 
+          $('#suggestions').hide(); 
+      }
+  });
+});
+
+    $(document).ready(function(){
+        $(".image-box-1").click(function(){
+            $("img").animate({
+                left: '250px',
+                opacity: '0.5',
+                height: 'toggle'
+            }, 1000, function() {
+                
+                alert("Animation complete!");
+            });
+        });
+    });
+    const image = document.querySelector('.img-col-2-1-image img');
+
+/
+image.addEventListener('mouseenter', function() {
+    image.classList.add('zoom-out');
+});
+
+
+image.addEventListener('mouseleave', function() {
+    image.classList.remove('zoom-out');
+});
+
+
+var countDownDate = new Date("Dec 10, 2024 11:29:25").getTime();
+
+
+var x = setInterval(function() {
+
+  
+  var now = new Date().getTime();
+    
+  
+  var distance = countDownDate - now;
+    
+  
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+ 
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+ 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+    </script>
+</body>
+</html>
